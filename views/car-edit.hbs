@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>Edit car page</h1>
+    <form action="/cars/edit" method="POST">
+    <div class="row">
+        <div class="input-field col s10">
+          <input
+           id="model"
+            type="text"
+             class="validate"
+             required
+             name="model"
+             value="{{car.model}}"
+             >
+          <label 
+          for="model">Car model</label>
+           <span class="helper-text" data-error="Write car modul"></span>
+        </div>
+        <div class="input-field col s10">
+          <input 
+          id="price" 
+          type="number" 
+          class="validate"
+          required min="1"
+          name="price"
+          value="{{car.price}}"
+          >
+          <label for="price">Car price</label>
+           <span class="helper-text" data-error="wrong" data-success="Write car price"></span>
+        </div>
+        <div class="input-field col s10">
+          <input 
+          id="img" 
+          type="text" 
+          class="validate"
+          required
+          name="img"
+          value="{{car.img}}"
+          >
+          <label for="img">Car img</label>
+           <span class="helper-text" data-error="wrong" data-success="Write car img"></span>
+        <input type="hidden" value="{{car.id}}" name="id">
+        <button class="btn btn-primary" name="">Send</button>
+        </div>
+      </div>
+      </form>
+</div>
